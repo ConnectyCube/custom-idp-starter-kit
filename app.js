@@ -64,8 +64,13 @@ function verifyUser(token) {
     const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
 
-    userData = {uid: userID, login: uLogin, email: uEmail, user: {id: userID, login: uLogin, email: uEmail}};
-    // userData = {users: [{uid: userID, login: uLogin, email: uEmail}]};
+    userData = {
+        uid: userID,
+      login: uLogin,
+      email: uEmail,
+       user: {id: userID, login: uLogin, email: uEmail},
+      users: [{uid: userID, login: uLogin, email: uEmail}]
+    };
 
     testUsers[token] = userData
   }
