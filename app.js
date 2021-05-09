@@ -60,12 +60,12 @@ function verifyUser(token) {
   let userData = testUsers[token]
   if (!userData) {
     const userID = Math.floor(Math.random() * 1000000);
-    
-    const uLogin = userID + "";
+
+    const uLogin = "login_" + userID;
     const uEmail = userID + "@test.com";
-    
+
     userData = {uid: userID, login: uLogin, email: uEmail, user: {id: userID, login: uLogin, email: uEmail}};
-    
+
     testUsers[token] = userData
   }
 
