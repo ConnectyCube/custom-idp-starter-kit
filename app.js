@@ -18,9 +18,11 @@ app.get('/ping', (req, res, next) => {
 app.post('/user/verify', (req, res, next) => {
   const token = req.body.token
 
-  console.log("POST /user/verify, TOKEN: ", token);
+  console.log("POST /user/verify. token: ", token);
 
   const userData = verifyUser(token)
+
+  console.log("userData", userData);
 
   if (!userData) {
     return res.status(422).json({error: "User token is invalid"})
@@ -31,9 +33,11 @@ app.post('/user/verify', (req, res, next) => {
 app.get('/user/verify', (req, res, next) => {
   const token = req.query.token
 
-  console.log("GET /user/verify, TOKEN: ", token);
+  console.log("GET /user/verify. token: ", token);
 
   const userData = verifyUser(token)
+
+  console.log("userData", userData);
 
   if (!userData) {
     return res.status(422).json({error: "User token is invalid"})
