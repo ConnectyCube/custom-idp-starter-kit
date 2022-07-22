@@ -1,3 +1,5 @@
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://stand-with-ukraine.pp.ua)
+
 # ConnectyCube Custom identity provider Starter Kit
 
 A starter demo project for using Custom identity provider service for ConnectyCube
